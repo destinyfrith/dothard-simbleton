@@ -1,18 +1,23 @@
 import { getBusinesses } from "./database.js"
 import { Business } from "./Business.js"
 
-//
-const contentTarget = document.querySelector(".supplies")
+
+// this function declares the variable constant target to select the class id in the document
+// id is specified with a hashtag
+const contentTarget = document.querySelector("#container")
 
 // create a function that displays the business objects by name in a list form
-const BusinessList = () => {
+export const BusinessList = () => {
     const businessArray = getBusinesses()
-    contentTarget.innerHTML = "<h1>Active Businesses</h1>"
+
+    // this displays the title of the documents within the html
+        contentTarget.innerHTML = "<h1>Active Businesses</h1>"
 
     // using for each method to display each business name object in the business array
     businessArray.forEach(
-        (businessName) => {
-            contentTarget.innerHTML += Business(businessName)
+        (businessObject) => {
+            // the html document aka the target will now display the business object from the business function
+            contentTarget.innerHTML += Business(businessObject)
         }
     );
 }

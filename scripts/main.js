@@ -1,17 +1,9 @@
 // import function that will display html for business object names and info
-import { Business } from "./Business.js"
+import { BusinessList } from "./BusinessList.js"
+import { NewYorkArray } from "./Business.js"
 
-//
-const mainContainer = document.querySelector("#container")
+// invoke the function that displays the business list objects
+BusinessList()
 
-//
-const applicationHTML = `
-<h1>Active Businesses</h1>
-
-<article class="businesses">
-   
-    ${Businesses()}
-</article>
-`
-// 
-mainContainer.innerHTML = applicationHTML
+// invoke the function that displays the new york businesses only
+NewYorkArray()
