@@ -14,20 +14,3 @@ export const Business = (businessObject) => {
         </section>
     `
 }
-
-// create a function that says if a business object state address city is equal to NY
-// return true, if not return false
-const findNewYorkBusinesses = (businessObject) => {
-    if (businessObject.addressStateCode === "NY") {
-        return true
-    }
-    return false
-}
-
-// Create a new array that contains supplies that cost less than $50
-export const NewYorkArray = () => {
-    // declare a new variable that it set to invoke the true/false statement using the filter method
-    const filteredItems = businesses.filter(findNewYorkBusinesses)
-    // return that declared variable
-    return filteredItems
-}
